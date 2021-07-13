@@ -1,0 +1,118 @@
+.row-list-wrap {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 33% 17% 10% 20% 20%;
+  align-items: center;
+  border-bottom: 1px solid rgb(234, 236, 239);
+}
+
+.row-list-wrap:hover {
+  cursor: pointer;
+  background-color: rgb(245, 245, 245);
+}
+
+/* name */
+
+.row-name {
+  display: flex;
+  align-items: center;
+}
+
+.row-name-detail {
+  margin-left: 15px;
+}
+
+.crypto-symbol,
+.lastchange-label, 
+.marketcap-label {
+  color: #1E2329;
+}
+
+.crypto-name {
+  font-size: 12px;
+  color: #707A8A;
+}
+
+/* 24h change */
+.row-last-change {
+  display: flex;
+  justify-content: center;
+}
+
+.row-marketcap, .row-trade {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lastprice-label, .lastchange-label, .marketcap-label {
+  font-size: 14px;
+}
+
+.btn-trade {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  color: rgb(201, 148, 0);
+  border: 1px solid rgb(234, 236, 239);
+  border-radius: 4px;
+  background: #FFFFFF;
+}
+
+.marketcap-key,
+.lastprice-key,
+.lastchange-key {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .row-list-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row-name {
+    display: flex;
+    align-items: center;
+  }
+
+  .row-name-detail {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+
+  .crypto-name {
+    margin-left: 8px;
+  }
+
+  .marketcap-key,
+  .lastprice-key,
+  .lastchange-key {
+    display: block;
+    font-size: 14px;
+    color: #707A8A;
+  }
+
+  .row-last-price,
+  .row-last-change,
+  .row-marketcap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0px;
+  }
+
+  .row-trade {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 4px 0px;
+  }
+}

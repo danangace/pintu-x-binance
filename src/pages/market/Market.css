@@ -1,0 +1,66 @@
+.market-wrap {
+  width: 75%;
+}
+
+@media screen and (max-width: 1440px) {
+  .market-wrap {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .market-wrap {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .market-wrap {
+    width: 100%;
+  }
+
+  .market-title {
+    padding: 0px 16px;
+  }
+}
+
+.market-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.card-wrap {
+  margin-top: 24px;
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 4%);
+  padding: 24px;
+  background: #FFFFFF;
+}
+
+.tag-wrap-list {
+  display: flex;
+  justify-content: flex-start;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tag-wrap-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media screen and (max-width: 858px) {
+  .tag-wrap-list {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card-wrap {
+    padding: 0px;
+  }
+  
+  .tag-wrap-list {
+    margin: 16px;
+    padding: 16px 16px 16px 0px;
+  }
+}

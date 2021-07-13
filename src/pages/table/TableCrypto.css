@@ -1,0 +1,8 @@
+.table-wrapper {
+  margin-top: 24px;
+}
+
+.crypto-list-wrap {
+  display: flex;
+  flex-direction: column;
+}
