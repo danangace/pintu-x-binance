@@ -6,3 +6,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.loading-error {
+  padding: 16px 0px;
+}
+
+@media screen and (max-width: 425px) {
+  .loading-error {
+    padding: 16px;
+  }
+}

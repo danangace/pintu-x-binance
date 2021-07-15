@@ -1,11 +1,5 @@
 .market-wrap {
-  width: 75%;
-}
-
-@media screen and (max-width: 1440px) {
-  .market-wrap {
-    width: 90%;
-  }
+  width: 90%;
 }
 
 @media screen and (max-width: 1024px) {

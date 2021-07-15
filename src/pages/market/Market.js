@@ -11,19 +11,21 @@ import TableCrypto from '../table/TableCrypto'
 let initialTags = [
   { key: 'all', label: 'All', active: true },
   { key: 'defi', label: 'DeFi', active: false },
-  { key: 'innovation', label: 'Inovation', active: false },
+  { key: 'innovation-zone', label: 'Inovation', active: false },
   { key: 'pos', label: 'POS', active: false },
   { key: 'polkadot', label: 'Polkadot', active: false },
   { key: 'nft', label: 'NFT', active: false },
   { key: 'pow', label: 'POW', active: false },
-  { key: 'bsc', label: 'BSC', active: false },
+  { key: 'BSC', label: 'BSC', active: false },
   { key: 'storage', label: 'Storage', active: false }
 ]
   
 function Market () {
   const [tags, setTags] = useState(initialTags)
+  const [activeTag, setActiveTag] = useState("all")
 
   const handleClickTag = (key) => {
+    setActiveTag(key)
     const newTags = tags.map(tag => {
       tag.key === key ? tag.active = true : tag.active = false
       return tag
@@ -40,7 +42,7 @@ function Market () {
             return <Tag key={item.key} tag={item} clickTag={handleClickTag}></Tag>
           }) }
         </div>
-        <TableCrypto></TableCrypto>
+        <TableCrypto activeTag={activeTag}></TableCrypto>
       </div>
     </div>
   )

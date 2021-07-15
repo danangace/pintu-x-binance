@@ -48,6 +48,14 @@
   font-size: 14px;
 }
 
+.label-green {
+  color: #03A66D;
+}
+
+.label-red {
+  color: #CF304A;
+}
+
 .btn-trade {
   box-sizing: border-box;
   margin: 0px;
