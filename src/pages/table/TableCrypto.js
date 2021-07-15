@@ -10,9 +10,8 @@ function TableCrypto ({ activeTag }) {
   const [isLoading, setLoading] = useState(false)
   const [cryptoAsset, setCryptoAsset] = useState([])
   const [filteredAsset, setFilteredAsset] = useState([])
-  // const [ticker, setTicker] = useState([])
 
-  // fetching crypto asset
+  // initial fetching crypto asset
   useEffect(() => {
     setLoading(true)
     fetch("https://www.binance.com/bapi/asset/v2/public/asset/asset/get-all-asset")
@@ -23,7 +22,7 @@ function TableCrypto ({ activeTag }) {
     })
   },[])
 
-  // // update data when tags is change
+  // update data when tags is change
   useEffect(() => {
     const filteredCryptoAsset = filteredAsset.filter(asset => activeTag === 'all' ? asset : asset.tags.includes(activeTag))
     setFilteredAsset(filteredCryptoAsset)
@@ -94,7 +93,7 @@ function TableCrypto ({ activeTag }) {
 
     return () => clearInterval(intervalFunction);
     // eslint-disable-next-line
-  }, [cryptoAsset, activeTag])
+  }, [cryptoAsset])
 
   if (isLoading) {
     return (
